@@ -31,7 +31,7 @@ teams_mode = False
 print(f"teams mode = {teams_mode}")
 line_enabled = False
 print(f"line = {line_enabled}")
-pipe_sounds_enabled = True
+pipe_sounds_enabled = False #you can ignore this
 baseball_mode = False
 print(f"baseball mode = {baseball_mode}")
 
@@ -43,7 +43,7 @@ print(f"Strikes Max = {strikes_max}")
 outs_max = 2
 print(f"Outs Max = {outs_max}")
 
-# Metal pipe sound timings
+# Metal pipe sound timings, just ignore this
 pipe_sound_min_time = 20    # seconds
 pipe_sound_max_time = 1800  # 30 minutes in seconds
 
@@ -93,23 +93,23 @@ def load_sounds():
     print("loading point sound")
     sounds['point'] = pygame.mixer.Sound('FlappyPoint.mp3')
     print("loaded point")
-    sounds['metal_pipe'] = pygame.mixer.Sound('MetalPipeClang.mp3')
-    sounds['metal_pipe_loud'] = pygame.mixer.Sound('MetalPipeClangLoud.mp3')
+    sounds['metal_pipe'] = pygame.mixer.Sound('MetalPipeClang.mp3') #ignore this
+    sounds['metal_pipe_loud'] = pygame.mixer.Sound('MetalPipeClangLoud.mp3') #ignore this also
     print("loading ball")
-    sounds['ball'] = pygame.mixer.Sound('WiiBaseballBall.mp3')      # Replace with your ball sound file
+    sounds['ball'] = pygame.mixer.Sound('WiiBaseballBall.mp3')
     print("loaded ball, loading strike")
-    sounds['strike'] = pygame.mixer.Sound('WiiBaseballStrike.mp3')  # Replace with your strike sound file
+    sounds['strike'] = pygame.mixer.Sound('WiiBaseballStrike.mp3')
     print("loaded strike, loading out")
-    sounds['out'] = pygame.mixer.Sound('WiiBaseballOut.mp3')        # Replace with your out sound file
+    sounds['out'] = pygame.mixer.Sound('WiiBaseballOut.mp3')
     print("loaded out, loading batter out")
-    sounds['BatterOut'] = pygame.mixer.Sound('WiiBaseballBatterOut.mp3')        # Replace with your batter out sound file
+    sounds['BatterOut'] = pygame.mixer.Sound('WiiBaseballBatterOut.mp3')
     print("loaded batter out, loading your out")
-    sounds['YourOut'] = pygame.mixer.Sound('WiiBaseballYourOut.mp3')        # Replace with your your out sound file
+    sounds['YourOut'] = pygame.mixer.Sound('WiiBaseballYourOut.mp3')
     print("sounds loaded")
 
     return sounds
 
-# Function to play random metal pipe sounds
+# Function to play random metal pipe sounds, you can ignore this whole thing
 def metal_pipe_sound_thread():
     while True:
         if pipe_sounds_enabled:
@@ -164,7 +164,7 @@ def shift_score_color(score_image, score, target_score):
 def main():
     print("entered main loop")
     global resolution, sound_effects, boys_vs_girls_mode
-    global teams_mode, line_enabled, pipe_sounds_enabled, baseball_mode, sounds
+    global teams_mode, line_enabled, pipe_sounds_enabled, baseball_mode, sounds #ignore the fact that there is pipe sounds
 
     screen = pygame.display.set_mode(resolution, pygame.RESIZABLE)
     pygame.display.set_caption('Scoreboard')
@@ -172,7 +172,7 @@ def main():
     images, score_images = load_images()
     sounds = load_sounds()
 
-    # Start metal pipe sound thread
+    # Start metal pipe sound thread, you can also ignore this
     threading.Thread(target=metal_pipe_sound_thread, daemon=True).start()
 
     # Variables to store scores
@@ -295,7 +295,7 @@ def main():
                     need_update_line = True
                     need_redraw = True
 
-                elif event.key == pygame.K_p:
+                elif event.key == pygame.K_p: #you can ignore this keybinding too
                     print("pressed p")
                     pipe_sounds_enabled = not pipe_sounds_enabled
                     print(f"Pipe sounds toggled to {pipe_sounds_enabled}")
