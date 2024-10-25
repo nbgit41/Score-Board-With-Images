@@ -1,0 +1,49 @@
+I am working on a program that is a scoreboard.
+    It loads the scores from text files.
+        It will change the white values of the score images to green and shift it to red the closer it gets to a number specified in a variable
+    It displays the scores using images from the "images" folder in the same directory as the python code will be in
+        It should only load the image it needs when the score changes
+    It is locked in a 16:9 aspect ratio
+    It plays a sound when a point is scored.
+    It will play a metal pipe sound randomly between 20 seconds and 30 minutes.
+        It will play a louder metal pipe sound with a 1 in 100 chance
+        It will give a 3 second warning before playing the metal pipe sounds
+    It has a black line that can be toggled that is 5 pixles wide that goes down the middle of the screen.
+    It has Baseball mode, which makes it show a balls, strikes, and outs counter at the bottom of the screen in white text, the number of each also referenced from a file.
+    It should have multithreading for maximum performance
+    The Left score, team1, and boys images should all be aligned with the left of the window and the right score, team2, and girls images should all be aligned to the right side of the window
+    Make sure the images are scaled to the size of the window
+    Make sure to use print statements so I can know what is happening.
+    Again make sure the images are alighned to their side and to the top and scaled to the window.
+    
+It has the following key bindings:
+
+    'Y' Reset Resolution to default
+    'G' Toggle global keys - makes it so it will get the keys even if the window is not in focus
+    'S' Toggles sound effects
+    'V' Toggles Boys vs girls mode
+    'T' Toggles teams mode
+    'R' Reloads all images (not the video)
+    'L' Toggles a line down the middle
+    'P' Toggles pipe sound effects
+    'B' Toggles Baseball mode
+
+It References the following files in the same directory:
+
+    "FlappyPoint.mp3" - The Point sound effect
+    "MetalPipeClang.mp3" - The metal pipe noise
+    "MetalPipeClangLoud.mp3" - The loud metal pipe noise
+    "Balls.txt" - Amount of balls - capped at 3 but has a variable that I can change that
+    "Strikes.txt" - Amount of strikes - capped at 2 but has a variable that I can change that
+    "Outs.txt" - Amount of outs - capped at 2 but has a variable that I can change that
+    "Left.txt" - Left score file
+    "Right.txt" - Right score file
+    "MaxScore.txt" - Score value that the images are red at
+
+Within the Images folder:
+
+    "boys.png" - the image for the boys team that goes behind the left score in boys vs girls mode
+    "girls.png" - the image for the girls team that goes behind the right score in boys vs girls mode
+    "team1.png" - the image for team 1 that goes behind the left score in team mode
+    "team2.png" - the image for team 2 that goes behind the right score in team mode
+    for the scores they are labeled with the number, example - "0.png", "1.png", "2.png" etc.
